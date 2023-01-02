@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace AreaFinder
 {
@@ -34,62 +34,78 @@ namespace AreaFinder
         {
             Console.WriteLine("Enter your radius");
             double b = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Your circle area is :" + 3.141 * b);
+            if (b < 0 || b ==0)
+            {
+                throw new ArgumentException($"Error: Radius can not be less than 0\nCheck your input values");
+
+            }
+            else
+            {
+                Console.WriteLine("Your circle area is :" + Math.PI * b);
+            }
         }
 
         static void Triangle()
         {
             Console.WriteLine("Enter length of your first  side");
             double x = Convert.ToDouble(Console.ReadLine());
-                 Console.WriteLine("Enter length of your second  side");
+            Console.WriteLine("Enter length of your second  side");
             double y = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Enter length of your third  side");
             double z = Convert.ToDouble(Console.ReadLine());
-            double s = (x + y + z) / 2;
-            double area = Math.Sqrt(s * (s - x) * (s - y) * (s - z));
-            if (double.IsNaN(area))
+            if (x < 0 || x == 0 || y == 0 || y < 0 || z == 0 || z < 0)
             {
-                Console.WriteLine("This triangle does not exist !");
+                throw new ArgumentException($"Error: Side can not be less than 0\nCheck your input values");
             }
             else
             {
-                Console.WriteLine("Your total area is : " + area);
-            }
-            if (x > y && x > z)
-            {if (Math.Pow(x, 2) == Math.Pow(y, 2) + Math.Pow(z, 2))
+                double s = (x + y + z) / 2;
+                double area = Math.Sqrt(s * (s - x) * (s - y) * (s - z));
+                if (double.IsNaN(area))
                 {
-                    Console.WriteLine("Your triangle is right-angled");
+                    Console.WriteLine("This triangle does not exist !");
+                }
+                else
+                {
+                    Console.WriteLine("Your total area is : " + area);
+                }
+                if (x > y && x > z)
+                {
+                    if (Math.Pow(x, 2) == Math.Pow(y, 2) + Math.Pow(z, 2))
+                    {
+                        Console.WriteLine("Your triangle is right-angled");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Your triangle is not right-angled");
+                    }
+                }
+                if (y > x && y > z)
+                {
+                    if (Math.Pow(y, 2) == Math.Pow(x, 2) + Math.Pow(z, 2))
+                    {
+                        Console.WriteLine("Your triangle is right-angled");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Your triangle is not right-angled");
+                    }
+                }
+                if (z > y && z > x)
+                {
+                    if (Math.Pow(z, 2) == Math.Pow(y, 2) + Math.Pow(x, 2))
+                    {
+                        Console.WriteLine("Your triangle is right-angled");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Your triangle is not right-angled");
+                    }
                 }
                 else
                 {
                     Console.WriteLine("Your triangle is not right-angled");
                 }
-            }
-            if (y > x && y > z)
-            {
-                if (Math.Pow(y, 2) == Math.Pow(x, 2) + Math.Pow(z, 2))
-                {
-                    Console.WriteLine("Your triangle is right-angled");
-                }
-                else
-                {
-                    Console.WriteLine("Your triangle is not right-angled");
-                }
-            }
-            if (z > y && z > x)
-            {
-                if (Math.Pow(z, 2) == Math.Pow(y, 2) + Math.Pow(x, 2))
-                {
-                    Console.WriteLine("Your triangle is right-angled");
-                }
-                else
-                {
-                    Console.WriteLine("Your triangle is not right-angled");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Your triangle is not right-angled");
             }
         }
     }
