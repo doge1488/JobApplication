@@ -9,12 +9,9 @@
 
 Проверку на то, является ли треугольник прямоугольным
 
-Ссылка : https://github.com/doge1488/JobApplication/blob/main/BluePrint.cs
+Решение : https://github.com/doge1488/JobApplication/blob/main/BluePrint.cs
 
 
 В базе данных MS SQL Server есть продукты и категории. Одному продукту может соответствовать много категорий, в одной категории может быть много продуктов. Напишите SQL запрос для выбора всех пар «Имя продукта – Имя категории». Если у продукта нет категорий, то его имя все равно должно выводиться.
 
-Также без выполненного задания отклик не будет рассмотрен.
-
-Github или Pastebin всё еще удобнее чем поле на hh. По возможности — положите ответ рядом с кодом из первого вопроса.
-Ссылка : https://github.com/doge1488/JobApplication/blob/main/query.sql
+Решение : https://github.com/doge1488/JobApplication/blob/main/query.sql
