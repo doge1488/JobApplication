@@ -8,4 +8,5 @@
 Вычисление площади фигуры без знания типа фигуры в compile-time
 
 Проверку на то, является ли треугольник прямоугольным
+
 Ссылка : https://github.com/doge1488/JobApplication/blob/main/AreaFinder.cs
