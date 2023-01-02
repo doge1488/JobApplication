@@ -10,6 +10,8 @@
 Проверку на то, является ли треугольник прямоугольным
 
 Решение : https://github.com/doge1488/JobApplication/blob/main/BluePrint.cs
+
+
 Юнит-тест : https://github.com/doge1488/JobApplication/blob/main/UnitTest.cs 
 
 
