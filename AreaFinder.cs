@@ -87,6 +87,10 @@ namespace AreaFinder
                     Console.WriteLine("Your triangle is not right-angled");
                 }
             }
+            else
+            {
+                Console.WriteLine("Your triangle is not right-angled");
+            }
         }
     }
 }
